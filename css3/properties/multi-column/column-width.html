@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+    #demo1 {
+		line-height:14px !important;
+		margin:0px !important;
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>column-width</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>column-width</strong>：auto | length</p>
+    
+    <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="20%">取值</th>
+      <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td>auto</td>
+      <td> 由浏览器决定列的宽度。</td>
+    </tr>
+    <tr>
+      <td>length</td>
+      <td>指定列的宽度。</td>
+    </tr>
+  </table>
+    
+    <h2>说明</h2>
+    <table id="definition_and_usage" width="420" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%">默认值</td>
+        <td width="70%">auto</td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td>css3</td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td>object.style.columnWidth=&quot;100px&quot;</td>
+      </tr>
+    </table>
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300" style="position:relative;">
+        <p id="demo1">It’s a modest dream, a dream that deserves to come true, and yet a part of you might be wondering.Will it?Do you really have what it takes to be a professional blogger, or are you just being dumb? Is it realistic to make enough money from this to quit your job, or is that just silly? </p>
+        <div style="position:absolute; left:20px; bottom:10px;">
+       		<div style="line-height:25px;"><strong>column-width:</strong></div>
+            <input type="radio" name="demo1_radio" value="auto" checked><label for="">auto</label>
+            <input type="radio" name="demo1_radio" value="25px"><label for="">25px</label>
+            <input type="radio" name="demo1_radio" value="50px"><label for="">50px</label>
+            <input type="radio" name="demo1_radio" value="75px"><label for="">75px</label>
+            <input type="radio" name="demo1_radio" value="100px"><label for="">100px</label>
+        </div>
+        <script type="text/javascript">
+		var list = document.getElementsByName("demo1_radio");
+		
+		for(var i=0,len=list.length;i<len;i++) {
+			list.item(i).addEventListener("click",function(){
+				var width = this.value;
+				document.getElementById("demo1").style.WebkitColumnWidth=width+"";
+			},false);
+		}		
+        </script>
+        </td>
+        <td><p>&lt;p id=&quot;demo1&quot;&gt;It’s a modest dream, a dream that deserves to come true, and yet a part of you might be wondering.Will it?Do you really have what it takes to be a professional blogger, or are you just being dumb? Is it realistic to make enough money from this to quit your job, or is that just silly? &lt;/p&gt;</p>
+        <p>&nbsp;</p></td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

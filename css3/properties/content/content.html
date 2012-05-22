@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+    #first:before {
+		content:"before--";
+		color:#096;
+	}
+	#first:after {
+		content:"--after";
+		color:#09C;
+	}
+	#second:before {
+		content:icon;
+		color:#096;
+	}
+	#second:after {
+		content:"--after";
+		color:#09C;
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>content</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>content</strong>：normal | none | [<attr> | <url> | <string> | counter(name) | counter(name,list-style-type) | counters(name,string) | counters(name,string,list-style-type) | no-close-quote | no-open-quote | close-quote | open-quote]+
+
+</p>
+    
+    <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="20%">取值</th>
+      <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td>none</td>
+      <td> Sets the content, if specified, to nothing </td>
+    </tr>
+    <tr>
+      <td>normal</td>
+      <td> Sets the content, if specified, to normal, which default is "none" (which is nothing) </td>
+    </tr>
+    <tr>
+      <td> attr<em>(attribute)</em></td>
+      <td>插入标签属性值</td>
+    </tr>
+    <tr>
+      <td><em>string</em></td>
+      <td><dl>
+        <DD>插入字符串 </DD>
+      </dl></td>
+    </tr>
+    <tr>
+      <td> open-quote</td>
+      <td><DIV>
+        <DL>
+          <DD>插入quotes属性的前标记</DD>
+        </DL>
+      </DIV></td>
+    </tr>
+    <tr>
+      <td> close-quote</td>
+      <td>插入quotes属性的后标记</td>
+    </tr>
+    <tr>
+      <td> no-open-quote</td>
+      <td>并不插入quotes属性的前标记。但减少其嵌套级别</td>
+    </tr>
+    <tr>
+      <td> no-close-quote</td>
+      <td><dl>
+        <DD>并不插入quotes属性的后标记。但增加其嵌套级别 </DD>
+      </dl></td>
+    </tr>
+    <tr>
+      <td> url(<em>url</em>)</td>
+      <td>使用指定的绝对或相对地址插入一个外部资源（图像，声频，视频或浏览器支持的其他任何资源）</td>
+    </tr>
+  </table>
+    
+    <h2>说明</h2>
+    <p><strong>content:</strong>content属性与:before和:after伪元素一起使用，可以在内容的前后再插入内容。</p>
+    <table id="definition_and_usage" width="400px;" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%">默认值</td>
+        <td width="70%"> normal </td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td>css2</td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td><em>object</em>.style.content="url(beep.wav)" </td>
+      </tr>
+    </table>
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300" style="text-align:center;">
+        <p id="first">This is content!</p>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;p id=&quot;first&quot;&gt;This is content!&lt;/p&gt;</p>
+          <p>&nbsp;</p>
+          <p>#first:before {<br>
+&nbsp;&nbsp;content:&quot;before--&quot;;color:@green;<br>
+}<br>
+#first:after {<br>
+&nbsp;&nbsp;content:&quot;--after&quot;;color:@blue;<br>
+}</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align:center;">
+        <p id="second">This is content!</p>
+        </td>
+        <td>
+        <div class="codes">
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

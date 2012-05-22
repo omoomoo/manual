@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>float</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>float</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>float</strong>：nont | left | rigth</p>
+  <p><strong>默认值</strong>：none</p>
+  
+  <h2>取值</h2>
+  <p><strong>none</strong>：对象不浮动</p>
+  <p><strong>left</strong>：对象向左浮动。</p>
+  <p><strong>right</strong>：对象向右浮动。</p>
+    </p>
+    
+    <h2>说明</h2>
+    <p>With CSS float, an element can be pushed to the left or right, allowing other elements to wrap around it.</p>
+    <p>Float is very often used for images, but it is also useful when working with layouts.</p>
+<h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <img style="float:left;" src="../../images/float.gif"/>
+        <p>With CSS float, an element can be pushed to the left or right, allowing other elements to wrap around it.</p>
+        <p>Float is very often used for images, but it is also useful when working with layouts.</p>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img style=&quot;float:left;&quot; src=&quot;../../images/float.gif&quot;/&gt;<br>
+          &lt;p&gt;With CSS float, an element can be pushed to the left or right, allowing other elements to wrap around it.&lt;/p&gt;<br>
+          &lt;p&gt;Float is very often used for images, but it is also useful when working with layouts.&lt;/p&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*float可以使元素挤推到左边或者右边，同时允许其他对象元素围绕浮动后的元素。*/</p>
+          <p>/*浮动经常会用在图片上，同时也很频繁用在布局上，例如将block元素float在一行。*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <img src="../../images/float_image1.jpg" style="float:left">
+        <img src="../../images/float_image3.jpg" style="float:right">
+        </td>
+        <td>
+        <div class="codes">
+          <p>
+&lt;img src=&quot;float_image1.jpg&quot; style=&quot;float:left&quot;&gt;<br>
+&lt;img src=&quot;float_image3.jpg&quot; style=&quot;float:right&quot;&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*元素只能水平浮动，没有上下浮动</p>
+          <p>一个浮动的元素会尽可能地向父元素的左或向右挤推。</p>
+          <p>跟在浮动元素后面的元素会围绕浮动元素。</p>
+          <p>在浮动元素前面的元素不会受到浮动元素的影响。</p>
+          <p>如果一个图片右浮动，跟在图片后面的文本将会环绕在图片左边。*/</p>
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

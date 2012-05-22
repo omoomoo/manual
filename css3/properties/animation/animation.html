@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+    #demo1 {
+		width:50px; 
+		height:50px; 
+		border-radius:5px;
+		background-color:#396;
+		-webkit-animation:kf1 4s linear 0s infinite alternate;
+	}
+	#demo2 {
+		width:50px; 
+		height:50px; 
+		border-radius:5px;
+		background-color:#396;
+		-webkit-animation:kf2 4s linear 0s infinite alternate;
+	}
+	@-webkit-keyframes kf1 {
+		25% {
+			margin:0px 0px 0px 250px;
+		}
+		50% {
+			margin:150px 0px 0px 250px;
+		}
+		75% {
+			margin:150px 0px 0px 0px;
+		}
+		100% {
+			margin:0px;
+		}
+	}
+	@-webkit-keyframes kf2 {
+		25% {
+			margin:0px 0px 0px 250px;-webkit-transform:rotateY(360deg);
+		}
+		50% {
+			margin:150px 0px 0px 250px;-webkit-transform:rotateY(-360deg);
+		}
+		75% {
+			margin:150px 0px 0px 0px;-webkit-transform:rotateY(360deg);
+		}
+		100% {
+			margin:0px;-webkit-transform:rotateY(-360deg);
+		}
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>animation</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>animation</strong>：  animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction.  </p>
+    
+    <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="20%">取值</th>
+      <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td>animation-name</td>
+      <td>指定关键帧用来绑定到选择器上。</td>
+    </tr>
+    <tr>
+      <td>animation-duration</td>
+      <td>指定动画的持续时间（秒或毫秒）。</td>
+    </tr>
+    <tr>
+      <td>animation-timing-function</td>
+      <td>指定动画的速度曲线函数。</td>
+    </tr>
+    <tr>
+      <td>animation-delay</td>
+      <td>指定动画的延迟执行时间。</td>
+    </tr>
+    <tr>
+      <td>animation-iteration-count</td>
+      <td>指定动画的循环次数。</td>
+    </tr>
+    <tr>
+      <td>animation-direction</td>
+      <td>指定动画是否反向交替播放。</td>
+    </tr>
+  </table>
+    
+    <h2>说明    </h2>
+    <table id="definition_and_usage" width="476" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%">默认值</td>
+        <td width="70%"> none 0 ease 0 1 normal </td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td> no </td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td> CSS3 </td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td><em>object</em>.style.animation="mymove 5s infinite" </td>
+      </tr>
+  </table>
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div id="demo1"></div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>#demo1 {-webkit-animation:kf1 4s linear 0s infinite alternate;}</p>
+          <p>/*kf1为指定的keyframes，infinite指定动画无限循环播放，alternate指定动画反向交替播放*/</p>
+          <p><br>
+            @-webkit-keyframes kf1 { /*keyframes指定关键帧，相当于flash的帧*/<br>
+            25% {margin:0px 0px 0px 250px;}<br>
+            50% {margin:150px 0px 0px 250px;}<br>
+            75% {margin:150px 0px 0px 0px;}<br>
+            100% {margin:0px;}<br>
+            }        </p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+      	<td>
+        <div id="demo2"></div>
+        </td>
+      	<td><p>/*为之前的动画加入rotateY（）来实现3D动画。*/</p>
+      	  <p>#demo1 {-webkit-animation:kf2 4s linear 0s infinite alternate;}
+          </p>
+      	  <p><br>
+            @-webkit-keyframes kf2 { /*keyframes指定关键帧，相当于flash的帧*/<br>
+            25% {margin:0px 0px 0px 250px;-webkit-transform:rotateY(360deg);}<br>
+            50% {margin:150px 0px 0px 250px;-webkit-transform:rotateY(-360deg);}<br>
+            75% {margin:150px 0px 0px 0px;-webkit-transform:rotateY(360deg);}<br>
+            100% {margin:0px;-webkit-transform:rotateY(-360deg);}<br>
+        } </p></td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

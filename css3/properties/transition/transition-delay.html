@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>transition</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+	#tutorial1 div {
+		width:70px;
+		height:25px;
+		background-color:#099;
+		margin-top:10px;
+		border-radius:3px;
+	}
+    #tutorial1 div p{
+		color:white;
+	}
+	#tutorial1:hover div {
+		width:300px;
+	}
+	#tutorial1:hover div p {
+		color:white;
+	}
+	#tutorial1 div.delay1 {
+		-webkit-transition:linear 2s 0.5s;
+	}
+	#tutorial1 div.delay2 {
+		-webkit-transition:linear 2s 1s;
+	}
+	#tutorial1 div.delay3 {
+		-webkit-transition:linear 2s 1.5s;
+	}
+	#tutorial1 div.delay4 {
+		-webkit-transition:linear 2s 2s;
+	}
+	#tutorial1 div.delay5 {
+		-webkit-transition:linear 2s 2.5s;
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>transition-delay</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>transition-delay</strong>：  time; </p>
+    
+  <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+   	  <th width="11%">取值</th>
+   	  <th width="89%">说明</th>
+    </tr>
+    <tr>
+      <td> time</td>
+      <td>设置动画的延迟执行时间（秒或毫秒）。</td>
+    </tr>
+  </table>
+    
+    <h2>说明    </h2>
+    <table width="500" border="0" cellpadding="0" cellspacing="0" id="definition_and_usage">
+      <tr>
+        <td width="27%">默认值</td>
+        <td width="73%"> 0</td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td>否</td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td>CSS3</td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td><em>object</em>.style.transitionDelay  ="2s" </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300" id="tutorial1">
+        <div class="delay1">
+            <p>0.5s</p>
+        </div>
+        <div class="delay2">
+        	<p>1.0s</p>
+        </div>
+        <div class="delay3">
+        	<p>1.5s</p>
+        </div>
+        <div class="delay4">
+        	<p>2.0s</p>
+        </div>
+        <div class="delay5">
+        	<p>2.5s</p>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

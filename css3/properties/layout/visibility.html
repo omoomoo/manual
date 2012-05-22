@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>visibility</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>visibility</strong>：visible | hidden | collapse</p>
+  <p><strong>默认值</strong>：visible</p>
+    
+    <h2>取值</h2>
+  <p><strong>visible</strong>：设置元素可视。</p>
+  <p><strong>hidden</strong>：设置元素隐藏，同时保留其物理空间。</p>
+  <p><strong>collapse</strong>：主要用来隐藏表格的行或列。隐藏的行或列能够被其他内容使用。对于表格外的其他对象，其作用等同于hidden。IE6及以下不支持此参数值。</p>
+    </p>
+    
+    <h2>说明</h2>
+    <p>visibility:hidden与display:none不同，visibility:hidden隐藏后保留其物理空间，display:none则不保留物理空间。</p>
+    
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div style="background-color:#096; float:left; width:32%; height:30%;"></div>
+        <div style="background-color:#06C; float:left; width:32%; height:30%; visibility:hidden;"></div>
+        <div style="background-color:#933; float:left; width:32%; height:30%;"></div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div style=&quot;background-color:green; float:left;&quot;&gt;&lt;/div&gt;<br>
+  &lt;div style=&quot;background-color:blue; float:left;visibility:hidden;&quot;&gt;&lt;/div&gt;<br>
+  &lt;div style=&quot;background-color:red; float:left;&quot;&gt;&lt;/div&gt;
+          </p>
+          <p>&nbsp;</p>
+          <p>/*中间有一个蓝色的div，但是设置了visibility:hidden，元素隐藏了，但是却保留了物理空间啊。*/</p>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

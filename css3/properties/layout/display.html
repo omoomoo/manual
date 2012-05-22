@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>display</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>display</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>display</strong>: none | inline | block | list-item | inline-block | table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group | compact | run-in | ruby | ruby-base | ruby-text | ruby-base-group | ruby-text-group | box | inline-box</p>
+    
+    <h2>取值</h2>
+  <p><strong>none</strong>：隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间
+</p>
+  <p><strong>inline</strong>：指定对象为内联元素</p>
+  <p><strong>block</strong>：指定对象为块元素</p>
+  <p><strong>list-item：</strong>：指定对象为列表项目</p>
+  <p><strong>inline-block：</strong>：指定对象为内联块元素，按内联元素定位（不独占一行），但具有块元素的行为（例如行高等）。  </p>
+  <p><strong>table</strong>：指定对象作为块元素级的表格。类同于html标签&lt;table&gt;（CSS2）</p>
+  <p><strong>inline-table：</strong>：指定对象作为内联元素级的表格。类同于html标签&lt;table&gt;（CSS2）</p>
+  <p><strong>table-caption：</strong>：指定对象作为表格标题。类同于html标签&lt;caption&gt;（CSS2）</p>
+  <p><strong>table-cell：</strong>：指定对象作为表格单元格。类同于html标签&lt;td&gt;（CSS2）</p>
+  <p><strong>table-row：</strong>：指定对象作为表格行。类同于html标签&lt;tr&gt;（CSS2）</p>
+  <p><strong>table-row-group：</strong>：指定对象作为表格行组。类同于html标签&lt;tbody&gt;（CSS2）</p>
+  <p><strong>table-column：</strong>：指定对象作为表格列。类同于html标签&lt;col&gt;（CSS2）</p>
+  <p><strong>table-column-group：</strong>：指定对象作为表格列组显示。类同于html标签&lt;colgroup&gt;（CSS2）</p>
+  <p><strong>table-header-group：</strong>：指定对象作为表格标题组。类同于html标签&lt;thead&gt;（CSS2）</p>
+  <p><strong>table-footer-group：</strong>：指定对象作为表格脚注组。类同于html标签&lt;tfoot&gt;（CSS2）</p>
+  <p><strong>compact：</strong>：分配对象为块对象或基于内容之上的内联对象（CSS3）</p>
+  <p><strong>run-in：</strong>：分配对象为块对象或基于内容之上的内联对象（CSS3）</p>
+  <p><strong>ruby：</strong>：将对象作为表格脚注组显示（CSS3）</p>
+  <p><strong>ruby-base：</strong>：将对象作为表格脚注组显示（CSS3）</p>
+  <p><strong>ruby-text：</strong>：将对象作为表格脚注组显示（CSS3）</p>
+  <p><strong>ruby-base-group：</strong>：将对象作为表格脚注组显示（CSS3）</p>
+  <p><strong>ruby-text-group：</strong>：将对象作为表格脚注组显示（CSS3）</p>
+  <p><strong>box：</strong>：将对象作为弹性盒模型显示（CSS3）</p>
+  <p><strong>inline-box：</strong>：将对象作为内联块级弹性盒模型显示（CSS3）</p>
+  
+  <h2>说明</h2>
+    <p><strong>设置或检索对象是否及如何显示。</strong></p>
+  <p>IE7及以下浏览器不支持table相关的参数值，如：table, inline-table, table-caption, table-cell, table-row, table-row-group, table-column, table-column-group, table-footer-group, table-header-group。</p>
+  <p>写本文档时尚无浏览器支持ruby相关的参数值，如：ruby, ruby-base, ruby-text, ruby-base-group, ruby-text-group
+      对应的脚本特性为display。 </p>
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div style="background-color:#066; width:250px; height:40px;"></div>
+        <div style="background-color:#06C; width:250px; height:40px; display:none;"></div>
+        <div style="background-color:#C33; width:250px; height:40px;"></div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div id=&quot;green&quot;&gt;&lt;/div&gt;</p>
+          <p>&lt;div id=&quot;blue&quot;&gt;&lt;/div&gt;</p>
+          <p>&lt;div id=&quot;red&quot;&gt;&lt;/div&gt;</p>
+          <p>&nbsp;</p>
+          <p>#green {}            </p>
+          <p>#blue{display:none;}            </p>
+          <p>#red{} </p>
+          <p>&nbsp;</p>
+          <p>/*  隐藏对象。与visibility属性的hidden值不同，display:none不为被隐藏的对象保留其物理空间。*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div style="background-color:#099; height:30px;">div默认是块元素</div><br><br>
+        <div style="background-color:#099; height:30px; display:inline;">display:inline将div设置为内联元素</div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div id=&quot;block&quot;&gt;div默认是块元素（block）&lt;/div&gt;&lt;br&gt;&lt;br&gt;<br>
+&lt;div id=&quot;inline&quot;&gt;display:inline将div设置为内联元素（inline）&lt;/div&gt;</p>
+          <p>&nbsp;</p>
+          <p>#block{background-color:#099; height:30px;}</p>
+          <p>#inline{background-color:#099; height:30px; display:inline;}</p>
+          <p>&nbsp;</p>
+          <p>/*请查看块元素和内联元素的区别*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <span style="background-color:#099; height:30px; display:inline;">p默认是内联元素（inline）</span><br><br>
+        <span style="background-color:#099; height:30px; display:block;">display:block将p元素设置为块元素（block）</span>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;span id=&quot;inline&quot;&gt;p默认是内联元素（inline）&lt;/span&gt;<br>
+          &lt;span id=&quot;block&quot;&gt;display:block将p元素设置为块元素（block）&lt;/span&gt;</p>
+          <p>&nbsp;</p>
+          <p>#inline{background-color:#099; height:30px;}</p>
+          <p>#block{background-color:#099; height:30px; display:block;}</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div>
+        	<p style="display:list-item; list-style-type:disc; list-style-position:inside;">display:list-item</p>
+        	<p style="display:list-item; list-style-type:disc; list-style-position:inside;">display:list-item</p>
+        	<p style="display:list-item; list-style-type:disc; list-style-position:inside;">display:list-item</p>
+        	<p style="display:list-item; list-style-type:disc; list-style-position:inside;">display:list-item</p>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div&gt;</p>
+          <p>&nbsp;&nbsp;&lt;p class=&quot;list-item&quot;&gt;display:list-item&lt;/p&gt;</p>
+          <p>&nbsp;&nbsp;&lt;p class=&quot;list-item&quot;&gt;display:list-item&lt;/p&gt;</p>
+          <p>&nbsp;&nbsp;&lt;p class=&quot;list-item&quot;&gt;display:list-item&lt;/p&gt;</p>
+          <p>&nbsp;&nbsp;&lt;p class=&quot;list-item&quot;&gt;display:list-item&lt;/p&gt;</p>
+          <p>&lt;/div&gt;</p>
+          <p>&nbsp;</p>
+          <p>.list-item{display:list-item; list-style-type:disc; list-style-position:inside;}</p>
+          <p>&nbsp;</p>
+          <p>/*This is comments*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <p>An <span style="display:inline-block; line-height:50px; background-color:#DDD;">inline-block</span> is placed inline (ie. on the same line as adjacent content), but it behaves as a block.</p>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;p&gt;An &lt;span id=&quot;inline-block&quot;&gt;inline-block&lt;/span&gt; is placed inline (ie. on the same line as adjacent content), but it behaves as a block.&lt;/p&gt;</p>
+          <p>&nbsp;</p>
+          <p>#inline-block {display:inline-block; line-height:50px; background-color:#DDD;}</p>
+          <p>&nbsp;</p>
+          <p>/*display:inline-block;具有inline元素的定位，确具有block元素的行为。*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+      	<td>
+        <div style="display:table">
+        	<div style="display:table-row">
+            	<div style="display:table-cell; background-color:#099;"><p>display:table-cell</p></div>
+                <div style="display:table-cell; background-color:#099;"><p>display:table-cell</p></div>
+            </div>
+        </div>
+        </td>
+      	<td>
+      		<div class="codes">
+      		  <p>&lt;div style=&quot;display:table&quot;&gt;<br>
+      		    &nbsp;&nbsp;&lt;div style=&quot;display:table-row&quot;&gt;<br>
+      		    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=&quot;display:table-cell; background-color:#099;&quot;&gt;display:table-cell&lt;/div&gt;<br>
+      		    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div style=&quot;display:table-cell; background-color:#099;&quot;&gt;display:table-cell&lt;/div&gt;<br>
+      		    &nbsp;&nbsp;&lt;/div&gt;<br>
+   		      &lt;/div&gt;      		  </p>
+      		  <p>/*display:table相当于&lt;table&gt;，display:table-row相当于&lt;tr&gt;，display:table-cell相当于&lt;td&gt;，display:caption相当于&lt;caption&gt;，display:table-column相当于&lt;col&gt;，display:able-column-group相当于&lt;colgroup&gt;  ，display:table-header-group相当于thead，display:table-footer相当于&lt;tfooter&gt;。  */</p>
+          </div>
+      	</td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

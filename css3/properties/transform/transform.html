@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>transform</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+    #reference_line {
+		width:157px;
+		height:176px;
+		border:1px dashed #099;
+		margin:20px auto;
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>transform</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+  
+<h2>语法</h2>
+  <p><strong>transform</strong>：none|transform-functions;</p>
+    
+  <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+   	  <th width="20%">transform-functions取值</th>
+   	  <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td> none </td>
+      <td>无变换</td>
+    </tr>
+    <tr>
+      <td> matrix(<em>n,n,n,n,n,n</em>) </td>
+      <td> 定义一个2D矩阵变换，包含6个参数。</td>
+    </tr>
+    <tr>
+      <td> matrix3d<br>
+      (<em>n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n</em>) </td>
+      <td>定义一个2D矩阵变换，包含16个参数。</td>
+    </tr>
+    <tr>
+      <td> translate(<em>x,y</em>) </td>
+      <td>定义一个2D平移，x为X轴，y为Y轴。</td>
+    </tr>
+    <tr>
+      <td> translate3d(<em>x,y,z</em>) </td>
+      <td>定义一个3D平移，x为X轴，y为Y轴，z为Z轴（相当于垂直屏幕）。</td>
+    </tr>
+    <tr>
+      <td> translateX(<em>x</em>) </td>
+      <td> 定义一个X轴的平移。</td>
+    </tr>
+    <tr>
+      <td> translateY(<em>y</em>) </td>
+      <td> 定义一个Y轴的平移。 </td>
+    </tr>
+    <tr>
+      <td> translateZ(<em>z</em>) </td>
+      <td> 定义一个Z轴的平移。</td>
+    </tr>
+    <tr>
+      <td> scale(<em>x,y</em>) </td>
+      <td> 定义一个2D缩放。x为X轴，y为Y轴。 </td>
+    </tr>
+    <tr>
+      <td> scale3d(<em>x,y,z</em>) </td>
+      <td>定义一个3D缩放。x为X轴，y为Y轴，z为Z轴。 </td>
+    </tr>
+    <tr>
+      <td> scaleX(<em>x</em>) </td>
+      <td>定义一个X轴的缩放。 </td>
+    </tr>
+    <tr>
+      <td> scaleY(<em>y</em>) </td>
+      <td>定义一个Y轴的缩放。 </td>
+    </tr>
+    <tr>
+      <td> scaleZ(<em>z</em>) </td>
+      <td>定义一个Z轴的缩放。 </td>
+    </tr>
+    <tr>
+      <td> rotate(<em>angle</em>) </td>
+      <td> 定义一个2D旋转，旋转的角度作为参数。</td>
+    </tr>
+    <tr>
+      <td> rotate3d(<em>x,y,z,angle</em>) </td>
+      <td>定义一个3D旋转，？？？？</td>
+    </tr>
+    <tr>
+      <td> rotateX(<em>angle</em>) </td>
+      <td>定义一个3D旋转，？？？？</td>
+    </tr>
+    <tr>
+      <td> rotateY(<em>angle</em>) </td>
+      <td>定义一个3D旋转，？？？？</td>
+    </tr>
+    <tr>
+      <td> rotateZ(<em>angle</em>) </td>
+      <td>定义一个3D旋转，？？？？</td>
+    </tr>
+    <tr>
+      <td> skew(<em>x-angle,y-angle</em>) </td>
+      <td> 定义一个2D扭曲，x-angle为水平方向的旋转角度，y-angle为垂直方向的旋转角度。 </td>
+    </tr>
+    <tr>
+      <td> skewX(<em>angle</em>) </td>
+      <td>定义一个水平方向旋转的2D扭曲。 </td>
+    </tr>
+    <tr>
+      <td> skewY(<em>angle</em>) </td>
+      <td>定义一个垂直方向旋转的2D扭曲。 </td>
+    </tr>
+    <tr>
+      <td> perspective(<em>n</em>) </td>
+      <td> 给一个变换的元素定义一个透视图。</td>
+    </tr>
+  </table>
+   <h2>说明</h2>
+  <p>transform属性给元素提供了2D和3D的变换效果。这些效果包括旋转、矩阵变换、缩放、扭曲等。</p>
+  <table id="definition_and_usage" width="400px;" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="30%">默认值</td>
+      <td width="70%">none</td>
+    </tr>
+    <tr>
+      <td>继承</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>版本</td>
+      <td>CSS3</td>
+    </tr>
+    <tr>
+      <td>Javascript脚本</td>
+      <td>object.style.transform="rotate(7deg)" </td>
+    </tr>
+  </table>
+  <h2>兼容性</h2>
+  <p>The transform property is not supported in any browser.</p>
+  <p>Internet Explorer supports an alternative, the -ms-transform property (2D transforms only).</p>
+  <p>Firefox supports an alternative, the -moz-transform property (2D transforms only).</p>
+  <p>Opera supports an alternative, the -o-transform property (2D transforms only).</p>
+  <p>Safari and Chrome support an alternative, the -webkit-transform property (3D and 2D transforms).</p>
+<h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div id="reference_line">
+        <img src="../../images/transform.jpg"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&nbsp;</p>
+          <p>/*这是正常效果*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:translate(50px,20px);"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:translate(50px,20px);&quot;/&gt;
+          </p>
+          <p>&nbsp;</p>
+          <p>/*translate(50px,20px)将元素向x轴和y轴分别偏移50px和20px*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:rotate(50deg);"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:rotate(50deg);&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*将元素顺时针旋转50度*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:scale(0.85);"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:scale(0.85);&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*将元素缩小至原来的0.85倍*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:skew(5deg,5deg);"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:skew(5deg,5deg);&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*将元素水平方向顺时针旋转5度，垂直方向逆时针旋转5度*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:rotate3d(1,-1,1,60deg);"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:rotate3d(1,-1,1,60deg);&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*rotateX();rotateY();rotateZ()分别表示元素在X,Y,Z轴的旋转*/</p>
+          <p>/*rotate()表示在Z轴的旋转*/</p>
+          <p>/*rotate3d(<em>x,y,z,angle</em>)中x，y，z取值-1|0|1，分别设置x，y，z轴旋转方向，值得注意的是，css中的3d模型，y轴的方向跟数学中的是反向的（详细点击这里）。-1表示反向旋转，0表示不旋转，1表示正方向旋转。*/</p>
+          <p>&nbsp;</p>
+          <p>/*以下的属性设置的等值的。*/</p>
+          <p>/*rotate(30deg) = rotateZ(30deg) = rotate3d(0,0,1,30deg) = rotate(0,0,-1,30deg)*/        </p>
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

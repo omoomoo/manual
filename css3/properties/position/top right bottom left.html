@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>top | right | bottom | left</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>top | right | bottom | left</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+  
+    
+  <h2>语法</h2>
+  <p><strong>top | right | bottom | left</strong>：length | percentage | auto</p>
+  <p><strong>默认值</strong>：auto</p>
+
+  <h2>取值</h2>
+  <p><strong>auto</strong>：无特殊定位，根据HTML定位规则在文档流中分配。</p>
+  <p><strong>length</strong>：用长度值来定义距离父对象的偏移量。可以为负值。</p>
+  <p><strong>percentage</strong>：用百分比来定义距离父对象的偏移量。可以为负值。</p>
+
+  <h2>说明</h2>
+    <p><strong>检索或设置对象与其最近一个定位的父对象相关的位置。
+</strong></p>
+    <p>必须定义position属性值为absolute、relative或fixed，此取值方可生效。</p>
+
+  <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300" style="position:relative;">
+        <div style="width:200px; height:150px; position:absolute; background-color:#069;left:50%;top:50%;margin:-75px 0px 0px -100px;"></div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>#blue {</p>
+          <p>&nbsp;&nbsp;width:200px; </p>
+          <p>&nbsp;&nbsp;height:150px; </p>
+          <p>&nbsp;&nbsp;position:absolute; </p>
+          <p>&nbsp;&nbsp;background-color:#069;</p>
+          <p>&nbsp;&nbsp;left:50%;top:50%;</p>
+          <p>&nbsp;&nbsp;margin:-75px 0px 0px -100px;</p>
+          <p>} </p>
+          <p>/*可以利用top,right,bottom,left将对象水平垂直居中*/</p>
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>overflow-x</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>overflow-x</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>overflow</strong>-x：visible | hidden | scroll | auto</p>
+    
+    <h2>取值</h2>
+  <p><strong>visible</strong>：当子元素溢出父元素水平方向时始终显示。</p>
+  <p><strong>hidden</strong>：当子元素溢出父元素水平方向时将隐藏。</p>
+  <p><strong>scroll</strong>：当子元素溢出父元素水平方向时显示滚动条</p>
+  <p><strong>auto</strong>：当子元素溢出父元素水平方向时显示滚动条，此为body和textarea的默认值。</p>
+    
+  <h2>说明  </h2>
+  <p>**必须为父元素设置width，否则子元素溢出时，将会自动撑开父元素而使overflow-x无效。</p>
+    
+  <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div style="overflow-x:scroll; overflow-y:hidden; width:200px; height:170px; border:1px solid #069;"> 
+          <img src="../../images/overflow.jpg"/>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div style=&quot;overflow-x:scroll; overflow-y:hidden; width:200px; height:170px;&quot;&gt; <br>
+  &nbsp;&nbsp;&lt;img src=&quot;../../images/overflow.jpg&quot;/&gt;<br>
+  &lt;/div&gt;</p>
+          <p>&nbsp;</p>
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>clear</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>clear</strong>：none | left | right | both</p>
+  <p><strong>默认值</strong>：none</p>
+    
+    <h2>取值</h2>
+  <p><strong>none</strong>：默认两边都有浮动。</p>
+  <p><strong>left</strong>：不允许左边的浮动。</p>
+  <p><strong>right</strong>：不允许右边的浮动。</p>
+  <p><strong>both</strong>：
+    两边都不允许有浮动。</p>
+    
+    <h2>说明</h2>
+    <p>clear用来指定元素的左边或右边是否允许浮动</p>
+    <p>clear最经常用来清除跟在浮动元素后面，而使父元素的高得以控制。</p>
+    
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div style=" background:#069; width:250px;">
+          <div style="float:left;width:200px; height:80px; background:#096;"></div>
+          <div style="float:left;width:200px; height:80px; background:#C33;"></div>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div id=&quot;blue&quot;&gt;<br>
+  &nbsp;&nbsp;&lt;div id=&quot;green&quot; style=&quot;float:left;&gt;&lt;/div&gt;<br>
+  &nbsp;&nbsp;&lt;div id=&quot;red&quot; style=&quot;float:left;&gt;&lt;/div&gt;<br>
+  &lt;/div&gt;
+          </p>
+          <p>&nbsp;</p>
+          <p>/*green和red的父元素为red，但是由于green和red都浮动了，所以blue没有被撑开。*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div style=" background:#069; width:250px;">
+          <div style="float:left;width:200px; height:80px; background:#096;"></div>
+          <div style="float:left;width:200px; height:80px; background:#C33;"></div>
+          <div style="clear:both;"></div>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div style=&quot; background:#069; width:250px;&quot;&gt;<br>
+  &nbsp;&nbsp;&lt;div style=&quot;float:left;width:200px; height:80px; background:#096;&quot;&gt;&lt;/div&gt;<br>
+  &nbsp;&nbsp;&lt;div style=&quot;float:left;width:200px; height:80px; background:#C33;&quot;&gt;&lt;/div&gt;<br>
+  &nbsp;&nbsp;&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;<br>
+  &lt;/div&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*我们在浮动元素下面加一个clear:both的元素后，就可以将父元素撑开了。*/</p>
+          <p>&nbsp;</p>
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <script type="text/javascript" src="../scripts/common.js"></script>
+</head>
+<body>
+<div id="main_body">
+	<h1>块元素（block）和内联元素（inline）</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>块元素和内联元素的区别</h2>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="syntax">
+    <tr>
+      <th width="50%">块元素</th>
+      <th width="50%">内联元素</th>
+    </tr>
+    <tr>
+      <td>总是在新行上开始</td>
+      <td>跟其他元素都在一行上</td>
+    </tr>
+    <tr>
+      <td>高度、行高、外边距和内边距都可以控制</td>
+      <td>高度、行高、外边距和内边距都不可以控制</td>
+    </tr>
+    <tr>
+      <td>宽度的缺省值是100%，除非设置一个宽度</td>
+      <td>宽度为文本或图片的宽度，并且不可以控制</td>
+    </tr>
+    <tr>
+      <td>块元素可以容纳内联元素和其他块元素</td>
+      <td>内联元素只可以容纳文本和其他内联元素</td>
+    </tr>
+    <tr>
+      <td>常用的块元素：div h1 h2 h3 h4 h5 h6 table ul li form fieldset p等</td>
+      <td>常用的内联元素：a  img label input select textarea span em i br等</td>
+    </tr>
+  </table>
+  <h2>说明</h2>
+  <p><strong>注意：</strong>任何的块元素或内联都可以通过display:block和display:inline来达到互相转换。  </p>
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        </td>
+        <td>
+        <div class="codes">
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+        <div class="codes">
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

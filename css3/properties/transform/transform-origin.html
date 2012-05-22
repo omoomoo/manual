@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>transform</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+    #reference_line {
+		width:157px;
+		height:176px;
+		border:1px dashed #099;
+		margin:20px auto;
+		position:relative;
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>transform-origin</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+  
+<h2>语法</h2>
+  <p><strong>transform</strong>：  ( percentage | length | left | center | right ) ( percentage | length | top | center | bottom )? length?</p>
+    
+  <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+   	  <th width="20%">transform-functions取值</th>
+   	  <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td> none </td>
+      <td>无变换</td>
+    </tr>
+    <tr>
+      <td> matrix(<em>n,n,n,n,n,n</em>) </td>
+      <td> 定义一个2D矩阵变换，包含6个参数。</td>
+    </tr>
+    <tr>
+      <td> translate(<em>x,y</em>) </td>
+      <td>定义一个2D平移，x为X轴，y为Y轴。</td>
+    </tr>
+    <tr>
+      <td> translate3d(<em>x,y,z</em>) </td>
+      <td>定义一个3D平移，x为X轴，y为Y轴，z为Z轴（相当于垂直屏幕）。</td>
+    </tr>
+  </table>
+  <h2>说明</h2>
+  <p><strong>改变元素基点</strong></p>
+  <p>他的主要作用就是让我们在进行transform动作之前可以改变元素的基点位置，因为元素默认基点是元素中心点，但有时候我们需要在不同的位置对元素进行这些操作，那么我们就可以使用transform-origin来对元素进行基点位置改变，使元素基点达到你需要的基点位置。</p>
+  <p>transform-origin(X,Y)：其中X和Y的值可以是百分值,em,px，其中X也可以是字符参数值left,center,right；Y和X一样除了百分值外还可以设置字符值top,center,bottom，这个看上去有点像我们background-position设置一样；一般我们直接使用百分值,em,px设置值方便些。  </p>
+  <table id="definition_and_usage" width="444" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="30%">默认值</td>
+      <td width="70%"> 50% 50% 0 </td>
+    </tr>
+    <tr>
+      <td>继承</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td>版本</td>
+      <td>CSS3</td>
+    </tr>
+    <tr>
+      <td>Javascript脚本</td>
+      <td><em>object</em>.style.transformOrigin="20% 40% 0px" </td>
+    </tr>
+  </table>
+  <h2>兼容性</h2>
+  <p>Internet Explorer supports an alternative, the -ms-transform-origin property, but only for 2D-transforms.</p>
+  <p>Firefox supports an alternative, the -moz-transform-origin property, but only for 2D-transforms.</p>
+  <p>Opera supports an alternative, the -o-transform-origin property, but only for 2D-transforms.</p>
+  <p>Safari and Chrome supports an alternative, the -webkit-transform-origin property, on both 2D- and 3D-transfoms.</p>
+<h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:rotate(10deg)"/>
+        <div style="position:absolute; width:6px; height:6px; left:50%; top:50%; background-color:#06C; border-radius:50%;"></div>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:rotate(10deg)&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*正常情况下元素的基点在元素的正中间，如图中的蓝点位置，元素的变形将围绕该蓝点展开。*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:rotate(10deg); -webkit-transform-origin:left top;"/>
+        <div style="position:absolute; width:6px; height:6px; left:-3px; top:-3px; background-color:#06C; border-radius:50%;"></div>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:rotate(10deg); -webkit-transform-origin:left top;&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*-webkit-transform-origin:left top;将元素的基点移到左上角，rotate(10deg)的选择围绕左上角展开，如图所示*/</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div id="reference_line">
+        <img src="../../images/transform.jpg" style="-webkit-transform:rotate(10deg); -webkit-transform-origin:left bottom;"/>
+        <div style="position:absolute; width:6px; height:6px; left:-3px; top:99%; background-color:#06C; border-radius:50%;"></div>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;img src=&quot;../../images/transform.jpg&quot; style=&quot;-webkit-transform:rotate(10deg); -webkit-transform-origin:left bottom;&quot;/&gt;</p>
+          <p>&nbsp;</p>
+          <p>/*-webkit-transform-origin:left top;将元素的基点移到左下角，rotate(10deg)的选择围绕左下角展开，如图所示*/</p>
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

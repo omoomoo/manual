@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>transition</title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <style type="text/css">
+    #transition1 {
+		width:100px; 
+		height:60px; 
+		background-color:#39C; 
+		margin:60px auto;
+		border-radius:5px;
+		-webkit-transition:-webkit-transform ease-in-out 1s 0s;
+	}
+	#transition1:hover {
+		-webkit-transform:rotate(360deg);
+	}
+	#demo2 {
+		width:100px; 
+		height:60px; 
+		background-color:#39C; 
+		margin:60px auto;
+		border-radius:5px;
+		-webkit-transition:-webkit-transform ease 3s 0s;
+	}
+	#demo2:hover {
+		-webkit-transform:rotate3d(0,1,0,360deg);
+	}
+    </style>
+</head>
+<body>
+<div id="main_body">
+	<h1>transition</h1>
+  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
+    
+  <h2>语法</h2>
+  <p><strong>transition</strong>：  <em>property duration timing-function delay</em></p>
+    
+  <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+   	  <th width="20%">取值</th>
+   	  <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td> transition-property</td>
+      <td> 设置对象中的参与过渡的属性。</td>
+    </tr>
+    <tr>
+      <td> transition-duration</td>
+      <td> 设置对象过渡的持续时间。 </td>
+    </tr>
+    <tr>
+      <td> transition-timing-function</td>
+      <td> 设置对象中过渡的动画类型。</td>
+    </tr>
+    <tr>
+      <td> transition-delay</td>
+      <td> 设置对象延迟过渡的时间。</td>
+    </tr>
+  </table>
+    
+    <h2>说明</h2>
+    <p><strong>设置元素的过渡效果。</strong></p>
+    <p> 过渡效果将会在元素被hover时发生。这意味着，如果你要使ID为mydiv的元素产生过渡效果，你要有两步（如第一个实例）。    </p>
+    <table width="400px;" border="0" cellpadding="0" cellspacing="0" id="definition_and_usage">
+      <tr>
+        <td width="30%">默认值</td>
+        <td width="70%"> all 0 ease 0 </td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td>否</td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td>CSS3</td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td><em>object</em>.style.transition="width 2s" </td>
+      </tr>
+  </table>
+    <p>&nbsp;</p>
+    
+    <h2>兼容性</h2>
+    
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300" valign="middle" style="text-align:center;">
+        <div id="transition1">
+        	<p style="color:white;">该元素的hover效果会动哦！</p>
+        </div>
+        </td>
+        <td>
+        <div class="codes">
+          <p>&lt;div id=&quot;transition&quot;&gt;&lt;/div&gt; </p>
+          <p>#transition {</p>
+          <p>/*第一步:transition指定过渡的属性为transform，调速函数为ease-in-out 过渡属性为1s 延时0s*/<br>
+            -webkit-transition:-webkit-transform ease-in-out 1s 0s;<br>
+            }          </p>
+          <p>/*第二步:指定元素的hover，并为第一步指定的过渡属性transform赋值，这里指定元素旋转360度，那么该元素将会使用调数函数ease-in-out，用1s旋转360度，延迟1s执行*/<br>
+            #transition:hover {<br>
+            -webkit-transform:rotate(360deg);<br>
+            } </p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+      	<td valign="middle" style="text-align:center;">
+       	<div id="demo2">
+        	<p style="color:white;">该元素的hover效果会动哦！</p>
+        </div>	
+        </td>
+      	<td>
+        <div id="codes">
+          <p>#demo2 {<br>
+-webkit-transition:-webkit-transform ease 3s 0s;<br>
+}</p>
+          <p>#demo2:hover {<br>
+            -webkit-transform:rotate3d(0,1,0,360deg);<br>
+            }</p>
+          <p>/*这里是一个rotate3d(x,y,z);更详细的3d效果请点击这里。*/</p>
+          <p>&nbsp;</p>
+        	
+        </div>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

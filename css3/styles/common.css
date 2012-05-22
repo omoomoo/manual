@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	font-size:13px;
+	font-family:宋体, arial, georgia;
+}
+#main_body {
+	padding:10px;
+}
+#main_body p {
+	color:#555;
+    font-size:13px;
+	padding-left:10px;
+	line-height:22px;
+}
+#main_body h1 {
+	font-size:26px;
+	text-shadow:2px 2px 2px #CCC;
+	color:#058DC7;
+	padding-left:10px;
+}
+#main_body #desc {
+	margin-top:5px;
+	color:#005C9C;
+	border-top:1px solid #000;
+	background-color:#C1D9FF;
+	padding-left:10px;
+}
+#main_body h2 {
+	line-height:30px;
+	font-size:14px;
+	color:#333;
+	background-color:#EEE;
+	margin:15px 0px 15px;
+	padding-left:10px;
+}
+/***************************/
+#tutorials_table td {
+	height:200px;
+	box-shadow:1px 1px 5px 1px #666;
+	padding:10px;
+	text-align:left;
+	vertical-align:top;
+}
+#codes {
+}
+#definition_and_usage {
+	margin:10px 0px;
+	border:1px solid #C3C3C3;
+	border-collapse: collapse;
+}
+#definition_and_usage tr td{
+	height:25px;
+	text-align:left;
+	line-height:25px;
+	border:1px solid #C3C3C3;
+	padding-left:10px;
+}
+#definition_and_usage tr td:first-child {
+	background-color:#C1D9FF;
+	font-weight:600;
+}
+#syntax {
+	border:1px solid #C3C3C3;
+	border-collapse: collapse;
+}
+#syntax tr th{
+	height:25px;
+	text-align:left;
+	font-weight:600;
+	line-height:25px;
+	border:1px solid #C3C3C3;
+	background-color:#C1D9FF;
+	padding-left:10px;
+}
+#syntax tr td{
+	height:25px;
+	text-align:left;
+	line-height:25px;
+	border:1px solid #C3C3C3;
+	padding-left:10px;
+}
