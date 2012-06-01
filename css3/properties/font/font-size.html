@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
+</head>
+<body>
+<div id="property_nav">
+<a href="../../index2.html">前端参考手册</a>»<a href="">属性</a>»<a href="">字体</a></div>
+<div id="main_body">
+  <h1>font-size</h1>
+  <h2>语法</h2>
+  <p><strong>font-size</strong>：xx-small | xx-small | x-small  | small | medium | large    |  x-large  | xx-large  |  smaller  |  larger | length | percentage | inherit</p>
+    
+    <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="20%">取值</th>
+      <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td>xx-small</td>
+      <td>设置字体大小为xx-small。</td>
+    </tr>
+    <tr>
+      <td>x-small</td>
+      <td>设置字体大小为x-small。</td>
+    </tr>
+    <tr>
+      <td>small</td>
+      <td>设置字体大小为small。</td>
+    </tr>
+    <tr>
+      <td>medium</td>
+      <td>设置字体大小为medium。这是默认值。</td>
+    </tr>
+    <tr>
+      <td>large</td>
+      <td>设置字体大小为large。</td>
+    </tr>
+    <tr>
+      <td>x-large</td>
+      <td>设置字体大小为x-large。</td>
+    </tr>
+    <tr>
+      <td>xx-large</td>
+      <td>设置字体大小为xx-large。</td>
+    </tr>
+    <tr>
+      <td>smaller</td>
+      <td>设置字体大小为smaller。</td>
+    </tr>
+    <tr>
+      <td>larger</td>
+      <td>设置字体大小为larger。</td>
+    </tr>
+    <tr>
+      <td>length</td>
+      <td>使用px，em，等设置字体大小。</td>
+    </tr>
+    <tr>
+      <td>percentage</td>
+      <td>使用百分比设置字体大小。</td>
+    </tr>
+    <tr>
+      <td>inherit</td>
+      <td>继承。</td>
+    </tr>
+  </table>
+    
+    <h2>说明</h2>
+    <table id="definition_and_usage" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%">默认值</td>
+        <td width="70%">medium</td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td>css1</td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td><em>object</em>.style.fontSize="larger" </td>
+      </tr>
+    </table>
+    <h2>兼容性</h2>
+    <table id="compatibility" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="20%">IE</th>
+        <th width="20%">FireFox</th>
+        <th width="20%">Chrome</th>
+        <th width="20%">Safari</th>
+        <th width="25%">Opera</th>
+      </tr>
+      <tr>
+        <td class="c_firefox">&nbsp;</td>
+        <td class="c_firefox">&nbsp;</td>
+        <td class="c_chrome">&nbsp;</td>
+        <td class="c_safari">&nbsp;</td>
+        <td class="c_opera">&nbsp;</td>
+      </tr>
+    </table>
+  <p> <strong>Note:</strong> The value "inherit" is not supported in IE7 and earlier. IE8 requires a !DOCTYPE. IE9 supports "inherit". </p>
+  <h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <p id="demo1">font-size</p>
+        </td>
+        <td>
+        <strong>font-size:</strong><span id="demo1_value"></span><br>
+<input class="radio1" name="r1" type="radio" value="xx-small">
+xx-small
+        <input class="radio1" name="r1" type="radio" value="x-small">x-small
+        <input class="radio1" name="r1" type="radio" value="small">small<br>
+        <input class="radio1" name="r1" type="radio" value="medium">medium<br>
+        <input class="radio1" name="r1" type="radio" value="large">large
+        <input class="radio1" name="r1" type="radio" value="x-large">x-large
+        <input class="radio1" name="r1" type="radio" value="xx-large">xx-large<br>
+        <input class="radio1" name="r1" type="radio" value="smaller">smaller
+        <input class="radio1" name="r1" type="radio" value="large">larger<br>
+        <script type="text/javascript">
+        $(function(){
+			$(".radio1").click(function(){
+				$("#demo1").css("font-size",this.value);
+				$("#demo1_value").html(this.value);
+			});
+		})
+        </script>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

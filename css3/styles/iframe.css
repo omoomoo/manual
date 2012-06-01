@@ -6,7 +6,11 @@
 	list-style-type:none;
 	font-size:12px;
 }
+header,footer,aside,nav,section {
+	display:block;
+}
 header {
+	display:block;
 	width:100%;
 	height:80px;
 	
@@ -63,6 +67,7 @@ header {
 	background-image:-webkit-linear-gradient(rgba(51,85,153,.5),#0090FF);
 }
 aside {
+	display:block;
 	float:left;
 	margin:7px;
 	padding:15px;
@@ -110,6 +115,7 @@ aside .file>li {
 	border-radius:5px;
 }
 footer {
+	display:block;
 	width:100%;
 	border-top:1px solid #CCC;
 	text-align:center;

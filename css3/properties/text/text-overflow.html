@@ -4,83 +4,84 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="../../styles/common.css">
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
+    <script type="text/javascript">
+	window.onload = function(){
+		EventUtil.addHander(document.getElementById("demo1"),"click",function(){alert("~~~");});
+	}
+    </script>
 </head>
 <body>
+<div id="property_nav">
+<a href="../../index2.html">前端参考手册</a>»<a href="">目录2</a>»<a href="">属性3</a></div>
 <div id="main_body">
-	<h1>&nbsp;</h1>
-  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
-    
+  <h1>text-overflow</h1>
   <h2>语法</h2>
-  <p><strong>ddd</strong>：</p>
+  <p><strong>overflow</strong>：clip | ellipsis</p>
     
-    <h2>取值</h2>
+  <h2>取值</h2>
   <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <th width="20%">取值</th>
       <th width="auto">说明</th>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>clip</td>
+      <td>剪切文本，讲溢出的部分文本剪切。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>cllipsis</td>
+      <td>将溢出的部分文本用&quot;...&quot;代替。</td>
     </tr>
   </table>
     
     <h2>说明</h2>
-    <table id="definition_and_usage" width="400px;" border="0" cellspacing="0" cellpadding="0">
+    <p> text-overflow属性用来指定当文本溢出父元素时该如何处理。</p>
+    <table id="definition_and_usage" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="30%">默认值</td>
-        <td width="70%">&nbsp;</td>
+        <td width="70%">clip</td>
       </tr>
       <tr>
         <td>继承</td>
-        <td>&nbsp;</td>
+        <td>no</td>
       </tr>
       <tr>
         <td>版本</td>
-        <td>&nbsp;</td>
+        <td>css3</td>
       </tr>
       <tr>
         <td>Javascript脚本</td>
-        <td>&nbsp;</td>
+        <td><em>object</em>.style.textOverflow="ellipsis" </td>
       </tr>
     </table>
     <h2>兼容性</h2>
-    
+    <table id="compatibility" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="20%">IE</th>
+        <th width="20%">FireFox</th>
+        <th width="20%">Chrome</th>
+        <th width="20%">Safari</th>
+        <th width="25%">Opera</th>
+      </tr>
+      <tr>
+        <td class="c_ie">5</td>
+        <td class="c_firefox">7</td>
+        <td class="c_chrome">4</td>
+        <td class="c_safari">4</td>
+        <td class="c_opera">10.6</td>
+      </tr>
+    </table>
   <h2>示例</h2>
     
   <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
       <tr>
         <td width="300">
+        <p style="width:200px; height:25px; overflow:hidden; text-overflow:clip;">The text-overflow property specifies what should happen when text overflows the containing element.</p>
+        <p></p>
+        <p style="width:200px; height:25px; overflow:hidden; text-overflow:ellipsis">The text-overflow property specifies what should happen when text overflows the containing element.</p>
         </td>
-        <td>
-        <div class="codes">
-        </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-        </td>
-        <td>
-        <div class="codes">
-        </div>
-        </td>
+        <td>&nbsp;</td>
       </tr>
   </table>
 </div>

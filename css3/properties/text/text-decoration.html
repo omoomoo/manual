@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="../../styles/common.css">
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
 </head>
 <body>
 <div id="main_body">
-	<h1>&nbsp;</h1>
+	<h1>text-decoration</h1>
   <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
     
   <h2>语法</h2>
-  <p><strong>ddd</strong>：</p>
+  <p><strong>text-decoration</strong>：none | underline | overline | line-through | blink | inherit</p>
     
     <h2>取值</h2>
   <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -21,44 +21,50 @@
       <th width="auto">说明</th>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>none</td>
+      <td>使用默认值。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>underline</td>
+      <td>在文本下面添加下划线。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>overline</td>
+      <td>在文本上面添加加上划线。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>line-through</td>
+      <td>在文本中间添加删除线。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>blink</td>
+      <td>设置文本闪烁。（  IE, Chrome,Safari不支持）</td>
+    </tr>
+    <tr>
+      <td>inherit</td>
+      <td>继承父元素的text-decoratiion的值。</td>
     </tr>
   </table>
     
     <h2>说明</h2>
-    <table id="definition_and_usage" width="400px;" border="0" cellspacing="0" cellpadding="0">
-      <tr>
+    <p><strong>Note:</strong> The value "inherit" is not supported in IE7 and earlier. IE8 requires a !DOCTYPE. IE9 supports "inherit".</p>
+    <p><strong>Note:</strong> The "blink" value is not supported in IE, Chrome, or Safari.</p>
+<table id="definition_and_usage" width="497" border="0" cellspacing="0" cellpadding="0">
+    <tr>
         <td width="30%">默认值</td>
-        <td width="70%">&nbsp;</td>
+        <td width="70%">none</td>
       </tr>
       <tr>
         <td>继承</td>
-        <td>&nbsp;</td>
+        <td>no</td>
       </tr>
       <tr>
         <td>版本</td>
-        <td>&nbsp;</td>
+        <td>css1</td>
       </tr>
       <tr>
         <td>Javascript脚本</td>
-        <td>&nbsp;</td>
+        <td><em>object</em>.style.textDecoration="overline" </td>
       </tr>
     </table>
     <h2>兼容性</h2>
@@ -68,18 +74,25 @@
   <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
       <tr>
         <td width="300">
+        <p id="demo1_p">The value "inherit" is not supported in IE7 and earlier. IE8 requires a !DOCTYPE. IE9 supports "inherit".</p>
         </td>
-        <td>
-        <div class="codes">
-        </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-        </td>
-        <td>
-        <div class="codes">
-        </div>
+        <td class="radioController">
+        <div style="line-height:25px;"><strong>text-decoration:</strong></div>
+          <input type="radio" name="demo1_radio" value="none" checked><label for="">none</label>
+            <input type="radio" name="demo1_radio" value="inherit"><label for="">inherit</label>
+          <input type="radio" name="demo1_radio" value="overline"><label for="">overline</label>
+          <input type="radio" name="demo1_radio" value="underline"><label for="">underline</label>
+          <input type="radio" name="demo1_radio" value="line-through"><label for="">line-through</label>
+          <input type="radio" name="demo1_radio" value="blink"><label for="">blink</label>
+          <p>/*</p>
+            <p><strong>Note:</strong> The value "inherit" is not supported in IE7 and earlier. IE8 requires a !DOCTYPE. IE9 supports "inherit".</p>
+            <p><strong>Note:</strong> The "blink" value is not supported in IE, Chrome, or Safari.            </p>
+            <p></p>
+            <p>*/</p>
+       	  <script type="text/javascript">
+				var list1 = document.getElementsByName("demo1_radio");
+				MyUtil.radioChangeCss(list1, document.getElementById("demo1_p"),"textDecoration");
+       		</script>
         </td>
       </tr>
   </table>

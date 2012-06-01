@@ -4,83 +4,91 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="../../styles/common.css">
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
+    <script type="text/javascript">
+    </script>
 </head>
 <body>
+<div id="property_nav">
+<a href="../../index2.html">前端参考手册</a>»<a href="">目录2</a>»<a href="">属性3</a></div>
 <div id="main_body">
-	<h1>&nbsp;</h1>
-  <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
-    
+  <h1>text-shadow</h1>
   <h2>语法</h2>
-  <p><strong>ddd</strong>：</p>
-    
-    <h2>取值</h2>
+  <p><strong>text-shadow</strong>：h-shadow v-shadow blur color<h2>取值</h2>
   <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <th width="20%">取值</th>
       <th width="auto">说明</th>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>h-shadow</td>
+      <td> 必选，水平阴影偏移值。可以为负值。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>v-shadow</td>
+      <td> 必选，垂直阴影偏移值。可以为负值。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>blur</td>
+      <td> 可选，阴影的模糊值。不允许为负值。默认为0。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>color</td>
+      <td> 可选，阴影的颜色。默认为黑色。</td>
     </tr>
   </table>
     
     <h2>说明</h2>
-    <table id="definition_and_usage" width="400px;" border="0" cellspacing="0" cellpadding="0">
+    <p> The text-shadow property attaches one or more shadows to text. The property is a comma-separated list of shadows, each specified by 2 or 3 length values and an optional color. Omitted lengths are 0. </p>
+    <table id="definition_and_usage" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="30%">默认值</td>
-        <td width="70%">&nbsp;</td>
+        <td width="70%">none</td>
       </tr>
       <tr>
         <td>继承</td>
-        <td>&nbsp;</td>
+        <td>no</td>
       </tr>
       <tr>
         <td>版本</td>
-        <td>&nbsp;</td>
+        <td>css3</td>
       </tr>
       <tr>
         <td>Javascript脚本</td>
-        <td>&nbsp;</td>
+        <td><em>object</em>.style.textShadow="2px 2px #ff0000" </td>
       </tr>
     </table>
     <h2>兼容性</h2>
-    
+    <table id="compatibility" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="20%">IE</th>
+        <th width="20%">FireFox</th>
+        <th width="20%">Chrome</th>
+        <th width="20%">Safari</th>
+        <th width="25%">Opera</th>
+      </tr>
+      <tr>
+        <td class="c_ie">10</td>
+        <td class="c_firefox">3</td>
+        <td class="c_chrome">3</td>
+        <td class="c_safari">3</td>
+        <td class="c_opera">10</td>
+      </tr>
+    </table>
   <h2>示例</h2>
     
   <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
       <tr>
         <td width="300">
+        <p id="demo1" style="font-size:30px; font-weight:700; text-align:center; margin:40px; text-shadow:4px 4px 4px #999;">text-shadow</p>
         </td>
-        <td>
-        <div class="codes">
-        </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-        </td>
-        <td>
-        <div class="codes">
-        </div>
-        </td>
+        <td><p>&lt;p id=&quot;demo1&quot;&gt;text-shadow&lt;/p&gt;</p>
+          <p>&nbsp;</p>
+          <p>#demo1 {</p>
+          <p>text-shadow:4px 4px 4px #999;</p>
+          <p>}</p>
+        <p>&nbsp;</p></td>
       </tr>
   </table>
 </div>

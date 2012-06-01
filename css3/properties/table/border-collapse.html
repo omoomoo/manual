@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" href="../../styles/common.css">
+    <script type="text/javascript" src="../../scripts/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
+    <style type="text/css">
+    #tutorials_table #demo1 td{
+		height:0px !important;
+	}
+    </style>
+</head>
+<body>
+<div id="property_nav">
+<a href="../../index2.html">前端参考手册</a>»<a href="">属性</a>»<a href="">表格</a></div>
+<div id="main_body">
+  <h1>border-collapse</h1>
+  <h2>语法</h2>
+  <p><strong>border-collapse</strong>：collapse | separate | inherit</p>
+    
+    <h2>取值</h2>
+  <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="20%">取值</th>
+      <th width="auto">说明</th>
+    </tr>
+    <tr>
+      <td> collapse </td>
+      <td> 设置表格的边框合并成一条（border-spacing和empty-cells属性将会被忽略）。</td>
+    </tr>
+    <tr>
+      <td> separate </td>
+      <td> 设置表格的边框分开（border-spacing和empty-cells属性将会被不会忽略）。</td>
+    </tr>
+    <tr>
+      <td> inherit </td>
+      <td> 继承。</td>
+    </tr>
+  </table>
+    
+    <h2>说明</h2>
+    <p> border-collapse属性设置边框是否合并成一条。 </p>
+    <table id="definition_and_usage" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%">默认值</td>
+        <td width="70%"> separate </td>
+      </tr>
+      <tr>
+        <td>继承</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>版本</td>
+        <td>css2</td>
+      </tr>
+      <tr>
+        <td>Javascript脚本</td>
+        <td><em>object</em>.style.borderCollapse="collapse" </td>
+      </tr>
+    </table>
+    <h2>兼容性</h2>
+    <table id="compatibility" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="20%">IE</th>
+        <th width="20%">FireFox</th>
+        <th width="20%">Chrome</th>
+        <th width="20%">Safari</th>
+        <th width="25%">Opera</th>
+      </tr>
+      <tr>
+        <td class="c_firefox">&nbsp;</td>
+        <td class="c_firefox">&nbsp;</td>
+        <td class="c_chrome">&nbsp;</td>
+        <td class="c_safari">&nbsp;</td>
+        <td class="c_opera">&nbsp;</td>
+      </tr>
+    </table>
+  <p><strong>Note:</strong> IE6-IE9不支持inherit。</p>
+  <p><strong>Note:</strong> If a !DOCTYPE is not specified, the border-collapse property can produce unexpected results.</p>
+<h2>示例</h2>
+    
+  <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td width="300">
+        <table id="demo1" width="100%" border="2" cellspacing="2" cellpadding="2">
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        </td>
+        
+        <td>
+          <p>
+          <strong>border-collapse:</strong><span id="demo1_value"></span><br>
+            <input type="radio" class="demo1_radio" name="demo1_radio" value="inherit">
+            inherit
+              <br>
+            <input type="radio" class="demo1_radio" name="demo1_radio" value="collapse"> 
+              collapse
+          </p>
+          </p>
+          <p>
+            <input type="radio" class="demo1_radio" name="demo1_radio" value="separate">
+            separate
+          </p>
+        <script type="text/javascript">
+        $(function(){
+			$(".demo1_radio").click(function(){
+				$("#demo1").css("border-collapse",this.value);
+				$("#demo1_value").text(this.value);
+			})
+		})
+        </script>
+        </td>
+      </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript文本高亮原理</title>
+<style type="text/css">
+.blue {
+	color:#09C;
+}
+.red {
+	color:#C36;
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var patt=/was/g;
+	patt.compile(patt);
+	var str = document.getElementById("test").innerHTML;
+	str.replace(patt,"<span class='red'>was<span>");
+	alert(str);
+}
+</script>
+</head>
+<body>
+<p id="test">I thought it was a bad sign that you didn't know who Ernest Hemingway was, and you thought I was lazy. We were both right.</p>
+</div>
+</body>
+</html>

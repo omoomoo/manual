@@ -1,14 +1,27 @@
 @charset "utf-8";
 /* CSS Document */
 * {
-	padding:0px;
 	margin:0px;
+	padding:0px;
 	list-style:none;
 	font-size:13px;
 	font-family:宋体, arial, georgia;
+	text-decoration:none;
+	color:#333;
+}
+#property_nav {
+	height:30px;
+	padding-left:7px;
+	background-color:rgb(0,153,204);
+	background-color:rgba(0,153,204,.8);
+}
+#property_nav a {
+	line-height:30px;
+	color:#FFF;
+	margin:0 5px;
 }
 #main_body {
-	padding:10px;
+	padding:3px 7px;
 }
 #main_body p {
 	color:#555;
@@ -40,7 +53,7 @@
 /***************************/
 #tutorials_table td {
 	height:200px;
-	box-shadow:1px 1px 5px 1px #666;
+	border:solid 1px #DDD;
 	padding:10px;
 	text-align:left;
 	vertical-align:top;
@@ -48,6 +61,7 @@
 #codes {
 }
 #definition_and_usage {
+	width:476px;
 	margin:10px 0px;
 	border:1px solid #C3C3C3;
 	border-collapse: collapse;
@@ -82,4 +96,62 @@
 	line-height:25px;
 	border:1px solid #C3C3C3;
 	padding-left:10px;
+}
+#compatibility {
+	width:476px;
+	border:1px solid #C3C3C3;
+	border-collapse: collapse;
+}
+#compatibility tr th{
+	height:25px;
+	text-align:center;
+	font-weight:600;
+	line-height:25px;
+	border:1px solid #C3C3C3;
+	background-color:#C1D9FF;
+	padding-left:10px;
+}
+#compatibility tr td{
+	height:25px;
+	text-align:right;
+	line-height:25px;
+	border:1px solid #C3C3C3;
+	padding:0px 10px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.c_ie {
+	background-image:url(../images/compatible_ie.gif);
+}
+.c_chrome {
+	background-image:url(../images/compatible_chrome.gif);
+}
+.c_firefox {
+	background-image:url(../images/compatible_firefox.gif);
+}
+.c_safari {
+	background-image:url(../images/compatible_safari.gif);
+}
+.c_opera {
+	background-image:url(../images/compatible_opera.gif);
+}
+.p_ie {
+	background-image:url(../images/precompatible_ie.gif);
+}
+.p_chrome {
+	background-image:url(../images/precompatible_chrome.gif);
+}
+.p_firefox {
+	background-image:url(../images/precompatible_firefox.gif);
+}
+.p_safari {
+	background-image:url(../images/precompatible_safari.gif);
+}
+.p_opera {
+	background-image:url(../images/precompatible_opera.gif);
+}
+/***********************************/
+.radioController input,.radioController label {
+	line-height:2;
+	margin:0px 5px;
 }

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="../../styles/common.css">
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
     <style type="text/css">
     #demo1 {
 		line-height:14px !important;
@@ -61,7 +61,8 @@
     
   <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
       <tr>
-        <td width="300" style="position:relative;">
+        <td width="300">
+        <div style="position:relative;">
         <p id="demo1">It’s a modest dream, a dream that deserves to come true, and yet a part of you might be wondering.Will it?Do you really have what it takes to be a professional blogger, or are you just being dumb? Is it realistic to make enough money from this to quit your job, or is that just silly? </p>
         <div style="position:absolute; left:20px; bottom:10px;">
        		<div style="line-height:25px;"><strong>column-width:</strong></div>
@@ -73,14 +74,9 @@
         </div>
         <script type="text/javascript">
 		var list = document.getElementsByName("demo1_radio");
-		
-		for(var i=0,len=list.length;i<len;i++) {
-			list.item(i).addEventListener("click",function(){
-				var width = this.value;
-				document.getElementById("demo1").style.WebkitColumnWidth=width+"";
-			},false);
-		}		
+		MyUtil.radioChangeCss(list, document.getElementById("demo1"),"WebkitColumnWidth");
         </script>
+        </div>
         </td>
         <td><p>&lt;p id=&quot;demo1&quot;&gt;It’s a modest dream, a dream that deserves to come true, and yet a part of you might be wondering.Will it?Do you really have what it takes to be a professional blogger, or are you just being dumb? Is it realistic to make enough money from this to quit your job, or is that just silly? &lt;/p&gt;</p>
         <p>&nbsp;</p></td>

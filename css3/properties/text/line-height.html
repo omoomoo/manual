@@ -4,15 +4,26 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="../../styles/common.css">
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
+    <style type="text/css">
+    #demo1 {
+		position:relative;
+	}
+	#demo1 p {
+		line-height:1.5;
+		margin:0px 0px 15px 0px;
+		background-color:rgba(0,153,153,.7);
+		color:white;
+	}
+    </style>
 </head>
 <body>
 <div id="main_body">
-	<h1>&nbsp;</h1>
+	<h1>line-height</h1>
   <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
     
   <h2>语法</h2>
-  <p><strong>ddd</strong>：</p>
+  <p><strong>line-height</strong>：normal | number | length | percentage | inherit</p>
     
     <h2>取值</h2>
   <table id="syntax" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -21,24 +32,24 @@
       <th width="auto">说明</th>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>normal</td>
+      <td>设置使用默认的行高。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>number</td>
+      <td>设置数值设置行号，所得的行高将为字体大小乘以numebr的值。即 line-height = font-size * numebr。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>length</td>
+      <td> 使用px，pt，cm，em来设置行高。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>percentage</td>
+      <td>使用百分比设置行高，所得的行高为字体大小乘以percentage的值。即 line-height = font-size * percentage。</td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>inherit</td>
+      <td>继承。</td>
     </tr>
   </table>
     
@@ -46,19 +57,19 @@
     <table id="definition_and_usage" width="400px;" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="30%">默认值</td>
-        <td width="70%">&nbsp;</td>
+        <td width="70%">normal</td>
       </tr>
       <tr>
         <td>继承</td>
-        <td>&nbsp;</td>
+        <td>yes</td>
       </tr>
       <tr>
         <td>版本</td>
-        <td>&nbsp;</td>
+        <td>css1</td>
       </tr>
       <tr>
         <td>Javascript脚本</td>
-        <td>&nbsp;</td>
+        <td>object.style.lineHeight=&quot;2&quot;</td>
       </tr>
     </table>
     <h2>兼容性</h2>
@@ -67,19 +78,36 @@
     
   <table id="tutorials_table" width="100%" border="0" cellspacing="10" cellpadding="0">
       <tr>
-        <td width="300">
+        <td width="300" id="demo1">
+        <p style="line-height:normal;" id="demo1_p">The line-height property specifies the line height.The line-height property specifies the line height.The line-height property specifies the line height.The line-height property specifies the line height.</p>
         </td>
-        <td>
-        <div class="codes">
-        </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-        </td>
-        <td>
-        <div class="codes">
-        </div>
+        <td style="position:relative;" class="radioController">
+       		<div style="line-height:25px;"><strong>column-width:</strong></div>
+            <input type="radio" name="demo1_radio" value="normal" checked><label for="">normal</label>
+            <input type="radio" name="demo1_radio" value="inherit"><label for="">inherit</label><br>
+            <input type="radio" name="demo1_radio" value="0.5"><label for="">0.5</label>
+            <input type="radio" name="demo1_radio" value="1"><label for="">1</label>
+            <input type="radio" name="demo1_radio" value="1.5"><label for="">1.5</label>
+            <input type="radio" name="demo1_radio" value="2"><label for="">2</label><br>
+            <input type="radio" name="demo1_radio" value="50%"><label for="">50%</label>
+            <input type="radio" name="demo1_radio" value="100%"><label for="">100%</label>
+            <input type="radio" name="demo1_radio" value="150%"><label for="">150%</label>
+            <input type="radio" name="demo1_radio" value="200%"><label for="">200%</label><br>
+            <input type="radio" name="demo1_radio" value="15px"><label for="">15px</label>
+            <input type="radio" name="demo1_radio" value="20px"><label for="">20px</label>
+            <input type="radio" name="demo1_radio" value="30px"><label for="">30px</label>
+            <input type="radio" name="demo1_radio" value="1em"><label for="">1em</label>
+            <input type="radio" name="demo1_radio" value="2em"><label for="">2em</label>
+            <input type="radio" name="demo1_radio" value="3em"><label for="">3em</label>
+            <p>/*</p>
+            <p>1=100%=1em,2=200%=em,ect....</p>
+            <p></p>
+            <p></p>
+            <p>*/</p>
+        	<script type="text/javascript">
+				var list = document.getElementsByName("demo1_radio");
+				MyUtil.radioChangeCss(list, document.getElementById("demo1_p"),"lineHeight");
+       		</script>
         </td>
       </tr>
   </table>

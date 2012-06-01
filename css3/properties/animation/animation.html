@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title></title>
     <link rel="stylesheet" href="../../styles/common.css">
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../scripts/cokepluscarbon.js"></script>
     <style type="text/css">
     #demo1 {
 		width:50px; 
@@ -12,6 +12,8 @@
 		border-radius:5px;
 		background-color:#396;
 		-webkit-animation:kf1 4s linear 0s infinite alternate;
+		-moz-animation:kf1 4s linear 0s infinite alternate;
+		animation:kf1 4s linear 0s infinite alternate;
 	}
 	#demo2 {
 		width:50px; 
@@ -19,6 +21,8 @@
 		border-radius:5px;
 		background-color:#396;
 		-webkit-animation:kf2 4s linear 0s infinite alternate;
+		-moz-animation:kf2 4s linear 0s infinite alternate;
+		animation:kf2 4s linear 0s infinite alternate;
 	}
 	@-webkit-keyframes kf1 {
 		25% {
@@ -34,23 +38,94 @@
 			margin:0px;
 		}
 	}
-	@-webkit-keyframes kf2 {
+	@-moz-keyframes kf1 {
 		25% {
-			margin:0px 0px 0px 250px;-webkit-transform:rotateY(360deg);
+			margin:0px 0px 0px 250px;
 		}
 		50% {
-			margin:150px 0px 0px 250px;-webkit-transform:rotateY(-360deg);
+			margin:150px 0px 0px 250px;
 		}
 		75% {
-			margin:150px 0px 0px 0px;-webkit-transform:rotateY(360deg);
+			margin:150px 0px 0px 0px;
 		}
 		100% {
-			margin:0px;-webkit-transform:rotateY(-360deg);
+			margin:0px;
+		}
+	}
+	@keyframes kf1 {
+		25% {
+			margin:0px 0px 0px 250px;
+		}
+		50% {
+			margin:150px 0px 0px 250px;
+		}
+		75% {
+			margin:150px 0px 0px 0px;
+		}
+		100% {
+			margin:0px;
+		}
+	}
+	@-webkit-keyframes kf2 {
+		25% {
+			margin:0px 0px 0px 250px;
+			-webkit-transform:rotateY(360deg);
+		}
+		50% {
+			margin:150px 0px 0px 250px;
+			-webkit-transform:rotateY(-360deg);
+		}
+		75% {
+			margin:150px 0px 0px 0px;
+			-webkit-transform:rotateY(360deg);
+		}
+		100% {
+			margin:0px;
+			-webkit-transform:rotateY(-360deg);
+		}
+	}
+	@-moz-keyframes kf2 {
+		25% {
+			margin:0px 0px 0px 250px;
+			-moz-transform:rotateY(360deg);
+		}
+		50% {
+			margin:150px 0px 0px 250px;
+			-moz-transform:rotateY(-360deg);
+		}
+		75% {
+			margin:150px 0px 0px 0px;
+			-moz-transform:rotateY(360deg);
+		}
+		100% {
+			margin:0px;
+			-moz-transform:rotateY(-360deg);
+		}
+	}
+	@keyframes kf2 {
+		25% {
+			margin:0px 0px 0px 250px;
+			transform:rotateY(360deg);
+		}
+		50% {
+			margin:150px 0px 0px 250px;
+			transform:rotateY(-360deg);
+		}
+		75% {
+			margin:150px 0px 0px 0px;
+			transform:rotateY(360deg);
+		}
+		100% {
+			margin:0px;
+			transform:rotateY(-360deg);
 		}
 	}
     </style>
 </head>
 <body>
+<div id="property_nav">
+<a href="">前端参考手册</a>»<a href="">目录2</a>»<a href="">属性3</a></div>
+<div id="main_body">
 <div id="main_body">
 	<h1>animation</h1>
   <p id="desc">说明：本文档兼容性测试基础环境为：windows系统；IE6-IE10, Firefox9.0, Chrome16.0, Safari5.1, Opera11.60</p>
@@ -110,6 +185,22 @@
       </tr>
   </table>
     <h2>兼容性</h2>
+    <table id="compatibility" width="476" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th width="20%">IE</th>
+      <th width="20%">FireFox</th>
+      <th width="20%">Chrome</th>
+      <th width="20%">Safari</th>
+      <th width="25%">Opera</th>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td class="p_firefox">5</td>
+      <td class="p_chrome">&nbsp;</td>
+      <td class="p_safari">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
     
   <h2>示例</h2>
     
